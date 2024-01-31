@@ -1,0 +1,8 @@
+body {background-color: grey; color: white; font-family: Arial}
+#title, #description {text-align: center;}
+#description {font-style: italic;}
+#survey-form {border: 1px solid white; width: 75%; margin: auto; padding: 30px;}
+#reference {display: block; text-align: center; text-decoration: none;}
+
+/*List of inputs*/
+#name, #email, #number, #dropdown, textarea, #dropdown2, #submit {width: 100%; border-radius: 5px; margin-bottom: 10px;}
