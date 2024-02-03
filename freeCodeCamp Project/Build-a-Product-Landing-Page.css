@@ -1,0 +1,34 @@
+@media only screen and (max-width: 800px){
+    body {width: 95%;}
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+#header {width: 100%; position: fixed; top: 0; left: 0; border: solid 1px black;}
+#header-img {width: 20%; float: inline-start;}
+#nav-bar {display: flex; margin-left: 10px;}
+.nav-link {margin-right: 10%; margin-top: 0.8%; text-decoration: none; color: black;}
+
+#form {text-align: center; margin-top: 8%;}
+#submit{padding: 5px 10px; margin: 10px; font-weight: bolder; background-color: orange; }
+
+#Features {width: 55%; margin: auto; border: 1px solid black;}
+#premium {display: flex; flex-flow: row; margin: auto; border: 1px solid black; }
+#material {width:50%; height: 100%; position: relative; left: 35%;}
+#shipping {display: flex; flex-flow: row; margin: auto; border: 1px solid black;}
+#truck {width:50%; height: 100%; position: relative; left: 35%;}
+#QA {display: flex; flex-flow: row; margin: auto; border: 1px solid black;}
+#battery {width:50%; height: 100%; position: relative; left: 35%;}
+
+#How-It-Works {display: flex; justify-content: center; margin: 40px auto;}
+iframe {width: 550px;}
+
+#Pricing {width: 55%; margin: auto; display: grid; grid-template-columns: auto auto auto; column-gap: 1em;}
+.price-item {display: flex; flex-flow: column wrap; text-align:center;  width: 100%; border: 1px solid black;}
+.price-item > span {margin-bottom: 1em;}
+.price-item > span:nth-child(1) {font-weight: bolder; background-color: lightgrey; padding: 10px 0;}
+.price-item > button {margin: auto; width: 35%; margin-bottom: 10px; background-color: orange;}
+
+footer {width: 55%; margin: 20px auto; padding: 10px 0; border: 1px solid black; background-color: lightgrey; justify-content: flex-end;}
+footer > div {display: flex; flex-flow: row;}
+footer > div > a {display: block; position: relative; right: 0;}
+
+#demo {display: block; text-align: center;}
