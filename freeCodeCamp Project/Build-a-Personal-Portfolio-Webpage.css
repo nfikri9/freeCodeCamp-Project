@@ -1,39 +1,57 @@
-* {box-sizing: border-box; }
-html {padding: 0; margin: 0;}
+:root {font-family: Arial, Helvetica, sans-serif;
+       --text-centered: center;
+       --whole-view: 100vh;
+       --1st-line: 20px 0;
+       --orange: #ff8000;
+       --blue: lightsteelblue;
+       --green: #80ff00;
+       --white: #fefefe;
+      }
 
-#navbar 
+/* NAVBAR */
+/* SECTION 1 - Welcome Section */
+#welcome-section {height: var(--whole-view);
+                  background-color: var(--orange);
+                }
 
+/* SECTION 2 - Projects Section */
+#projects {height: var(--whole-view);
+           text-align: var(--text-centered);
+           text-decoration: underline;
+           font-size: xx-large;
+           background-color: var(--blue);
+           color: var(--white);
+          }
+#project-tile {display: grid; grid-template-columns: auto auto auto auto;}
+#project1, #project2, #project3, #project4, #project5 {max-width: 450px; height:450px;}
+#project1:hover, #project2:hover, #project3:hover, #project4:hover, #project5:hover
+{ outline: solid 5px #3a3d40; }
 
+/* Section 3 - Contact Section */
+#Contact { background-color: var(--green);
+           text-align: var(--text-centered);
+           height: var(--whole-view);
+           padding: var(--1st-line);
+         }
+section > a > img {max-width: 400px; height: 200px; margin: 20px; }
+section > a > img:hover {max-width: 450px; height: 250px;
+                         box-shadow: 10px 10px 5px 5px #888888;
+                        }
 
-{width:  100%; height: auto;
+#demo {text-align: var(--text-centered);}
+
+/*SOME CODES FROM SCRATCHES*/
+#navbar {width:  100%; height: auto;
          padding: 20px 0;
          position: fixed; top: 0;
-         background: lightcoral;}
+         background: lightcoral;
+        }
 ul {display: flex; flex-flow: row;
     list-style-type: none;
-    justify-content: flex-end;}
+    justify-content: flex-end;
+   }
 li {height: 100%; width: 100px;
-    font-size: x-large;}
+    font-size: x-large;
+   }
 li:hover {background-color: lightsteelblue;}
 a {text-decoration: none;}
-
-#welcome-section {margin-top: 5%; width: 100%; height: 100vh;
-                  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
-                  }
-
-
-#projects {background-color: lightsteelblue; color: #fefefe;
-           height: 50em;
-           text-align: center; font-size: xx-large;
-           text-decoration: underline;}
-
-#project-tile > a > img{display: grid; grid-template-columns: auto auto auto auto;}
-img {max-width: 100%; height:auto}
-
-#Contact {background-color: cyan;}
-/*
-@media{}
-h1 {text-align: center;}
-#welcome-section, #projects , #Contacts {height: 100%;}
-#navbar {position: sticky; top:0;}
-*/
