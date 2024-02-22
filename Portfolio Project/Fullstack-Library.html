@@ -5,9 +5,205 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Fullstack-Library.css">
-    <style>table, th, td {border: 1px solid black;}</style>
   </head>
   <body>
+    <li>HTML to define the content of web pages</li>
+    <li>CSS to specify the layout of web pages</li>
+    <li>JavaScript to program the behavior of web pages</li>
+
+    <section id="introduction">
+      <h1>INTRODUCTION</h1>
+      <p>JavaScript is the programming language of the Web. <br>
+         JavaScript is used to program the behavior of web pages. <br>
+         The purpose of JavaScript:
+         <ul><li>Can changes HTML contents</li>
+             <li>Can changes HTML attribute values</li>
+             <li>Can changes HTML styles (CSS)</li>
+             <li>Can modifies the visibility of HTML elements</li>
+         </ul>
+      </p>
+
+      <h3>Installation</h3>
+      <p>Developer don't have to get or download JavaScript. <br>
+        JavaScript is already running in browser on computers, tablets, and smart-phones. <br>
+        JavaScript is free to use for everyone. <br>
+        There are multiple ways to include JavaScript:
+        <ul><li>Inside <b><code>&lt;script&gt;</code></b> element
+              <ul><li>Scripts can be placed in the <code><b>&lt;head&gt;</b></code>, or in the <code><b>&lt;body&gt;</b></code> element of an HTML page, or in both.</li>
+                  <li>Since script interpretation slows down the display, it is recommended placing scripts at the bottom of the <code><b>&lt;body&gt;</b></code> element to improve the display speed.</li>
+                  <li>Example: <pre> &lt;head&gt; <br>   &lt;script&gt; // My JavaScript codes &lt;/script&gt; <br> &lt;/head&gt; <br> &lt;body&gt; <br>   &lt;!--My HTML contents--&gt; <br>   &lt;script&gt; // My JavaScript codes &lt;/script&gt; <br> &lt;/body&gt;</pre></li>
+                </ul>
+            </li>
+            <li>External JavaScript files
+              <ul><li>External scripts are practical when the same code is used in many different web pages.</li>
+                  <li>JavaScript files have the file extension like <code>myfilename.js</code>.</li>
+                  <li>To use external file, use <code>&lt;script src="myfilename.js"&gt;&lt;/script&gt;</code> (use multiple <code>&lt;script&gt;</code> elements for multiple JavaScript files)</li>
+                  <li>Placing scripts in external files has some advantages:
+                    <ul><li>It separates HTML and JavaScript</li>
+                        <li>It makes HTML and JavaScript easier to read and maintain</li>
+                        <li>Cached JavaScript files can speed up page loads</li>
+                    </ul>
+                  </li>
+              </ul>
+            </li>
+        </ul>
+      </p>
+
+      <h3>JavaScript Versions</h3>
+      <p>JavaScript was invented by Brendan Eich in 1995, and became an ECMA standard in 1997. <br>
+        ECMAScript is the official name of the language.
+      </p>
+      <table>
+        <tr> <th>VERSION</th> <th>OFFICIAL NAME</th>       <th>DESCRIPTION</th> </tr>
+        <tr> <td>ES1</td>     <td>ECMAScript 1 (1997)</td> <td>First edition</td> </tr>
+        <tr> <td>ES2</td>     <td>ECMAScript 2 (1998)</td> <td>Editorial changes</td> </tr>
+        <tr> <td>ES3</td>     <td>ECMAScript 3 (1999)</td> <td>Added regular expressions <br> Added try/catch <br> Added switch <br> Added do-while</td> </tr>
+        <tr> <td>ES4</td>     <td>ECMAScript 4</td>        <td>Never released</td> </tr>
+        <tr> <td>ES5</td>     <td>ECMAScript 5 (2009)</td> <td>Added "strict mode" <br> Added JSON support <br> Added String.trim() <br> Added Array.isArray() <br> Added Array iteration methods <br> Allows trailing commas for object literals</td> </tr>
+        <tr> <td>ES6</td>     <td>ECMAScript 2015</td>     <td>Added let and const <br> Added default parameter values <br> Added Array.find() <br> Added Array.findIndex()</td> </tr>
+        <tr> <td></td>        <td>ECMAScript 2016</td>     <td>Added exponential operator (**) <br> Added Array.includes()</td> </tr>
+        <tr> <td></td>        <td>ECMAScript 2017</td>     <td>Added string padding <br> Added Object.entries() <br> Added Object.values() <br> Added async functions <br> Added shared memory <br> Allows trailing commas for function parameters</td> </tr>
+        <tr> <td></td>        <td>ECMAScript 2018</td>     <td>Added rest / spread properties <br> Added asynchronous iteration <br> Added Promise.finally() <br> Additions to RegExp</td> </tr>
+        <tr> <td></td>        <td>ECMAScript 2019</td>     <td>Added String.trimStart() <br> Added String.trimEnd() <br> Added Array.flat() <br> Added Object.fromEntries <br> Added Optional catch binding</td> </tr>
+        <tr> <td></td>        <td>ECMAScript 2020</td>     <td>Added the Nullish Coalescing Operator (??)</td> </tr>
+      </table>
+    </section>
+
+    <section id="syntax">
+      <h1>SYNTAX</h1>
+      <p>Syntax refers to the rules that define the structure of any language. <br> <!--https://woz-u.com/blog/what-is-syntax-in-computer-programming/-->
+         Every statement is ended with semicolon. <br>
+         There are many type of statements in JavaScript: <br>
+         <code>var x;       <span>// Example of declaration statement</span> <br>
+               var x = 5;   <span>// Example of initialization statement</span> <br>
+               x = 5 + 4;   <span>// Example of expression statement</span> <br>
+               if(x=6){}    <span>// Example of conditional/logical statement</span>
+        </code>
+      </p> 
+
+      <h3>Identifiers</h3>
+      <p>It is a name for an identifier. <br> The following are the rules in naming identifiers:
+        <ul><code>
+              <li>MyIdentifier    <span>// <b>Applies PascalCase</b>, where every first letter of every word is uppercase</span></li>
+              <li>myIdentifier    <span>// <b>Applies camelCase</b>, where every first letter of the first word is lowercase and the first letter of the next word is uppercase</span></li>
+              <li>caseSensitive   <span>// <b>Applies case sensitive</b> (MyIdentifier is not the same identifier as myIdentifier)</span></li>
+              <li>$myIdentifier_1 <span>// <b>Initial letter</b> can be any character, underscores, and dollar sign (subsequent characters can contain letters, digits, underscores, and dollar signs)</span></li>
+              <li>myIdentifier-1  <span>// <b>ERROR</b> (Can't contain any hyphens as the statement view that as an subtration operator or negative values)</span></li>
+              <li>4myIdentifier   <span>// <b>ERROR</b> (Can't start with digits)</span></li>
+              <li>var             <span>// <b>ERROR</b> (Can't use reserved keyword as an identifier)</span></li>
+            </code>
+        </ul>
+      </p>
+
+      <h3>Values</h3>
+      <p>The JavaScript syntax defines two types of values:
+        <ul><li><b>Literals</b>
+              <ul><li>There are fixed values, which can be written in any data type (<code>100</code> or <code>100.0 </code>as in number, <code>"John"</code> as in string, <code>true</code> as in boolean, etc.)</li>
+                  <li>Example: <code>total = 5 + 6; <span>// 5 and 6 are literals (written directly as value)</span></code></li>
+              </ul>
+            </li> <br>
+            <li><b>Variables</b>
+              <ul><li>There are variable values, which each variables stored their own values.</li>
+                  <li>Example: <code>total = x + y; // x and y are variables (written as variables, to represent their values respectively)</code>
+                  </li>
+              </ul>
+            </li>
+        </ul>
+      </p>
+
+      <h3>Comment</h3>
+      <p>It can be used to explain JavaScript code, make it more readable, or prevent execution when testing alternative code. <br>
+         There are 2 types:
+         <ol><li><b>Single Line Comments</b>, <code>// This is my single line comment</code> (the comment start after double dashed until the end of a line)</li>
+             <li><b>Multi-line Comments</b>, <code>/* This is my multi-line comment */</code> (the comment start with /* and end with */)</li>
+        </ol>
+      </p>
+    </section>
+
+    <section id="operator">
+      <h1>OPERATOR</h1>
+      <p>An expression statement is consist of variables, values and operators, which computes to a value (called computation/evaluation) <br>
+         <code>myVariable = myValue1 + myValue2; // myValue1 and myValue2 are values that performed addition operators, + and then assigned to variable myVariable with operator simple assignment, = as an evaluation</code>
+      </p>
+
+      <h3>Arithmetic Operators</h3>
+      <p>Perform arithmetic on numbers (can be written with literals or variables) <br>
+         The precedence is from left to right applying <b>BODMAS</b> (bracket, power off, division/multiplication, addition/subtraction) <br>
+         Concatenation is addition of values for string (works for addition only)
+         <code>
+         <ul>let x = 5;      <span>// x=5</span>                  <span>(Variable x stores 5 as value)</span>
+             <li>x = x + 1;  <span>// x=6</span>                  <span>(<b>Addition</b>, x adds 1)</span></li>
+             <li>++x;        <span>// x=6</span>                  <span>(<b>Pre-increment</b>, x adds 1 on the same line)</span></li>
+             <li>x++;        <span>// x=5</span>                  <span>(<b>Post-increment</b>, x adds 1 on the next line)</span></li>
+             <li>x = x - 1;  <span>// x=4</span>                  <span>(<b>Subtraction</b>, x subtracts 1)</span></li>
+             <li>--x;        <span>// x=4</span>                  <span>(<b>Pre-decrement</b>, x subtracts 1 on the same line)</span></li>
+             <li>x--;        <span>// x=5</span>                  <span>(<b>Post-decrement</b>, x subtracts 1 on the next line)</span></li>
+             <li>x = x * 3;  <span>// x=15</span>                 <span>(<b>Multiplication</b>, x multiplies 3)</span></li>
+             <li>x = x ** 3; <span>// x=125</span>                <span>(<b>Exponentiation</b>, x exponents 3)</span></li>
+             <li>x = x / 3;  <span>// x=1.6666666666666667</span> <span>(<b>Division</b>, x divides 3 and takes quotient as evaluation)</span></li>
+             <li>x = x % 3;  <span>// x=2 </span>                 <span>(<b>Modulo</b>, x divides 3 and takes remainder as evaluationn)</span></li>
+         </ul>
+         </code>
+
+      <h3>Assignment Operators</h3>
+      <h3>Comparison Operators</h3>
+      <h3>Logical Operators</h3>
+      <h3>Bitwise Operators</h3>
+    </section>
+
+    <section id="statement">
+      <h1>STATEMENT</h1>
+      <p>In a statement, keyword plays biggest role in JavaScript. <br>
+        Keyword is used to determines type of identifiers, and also determine actions to be performed in a statement.
+         <ul><li>Variable = It is a container for storing data.</li>
+             <li>Function = ???</li>
+        </ul>
+      </p>
+
+      <h3>Declaration / Initialization statement</h3>
+      <ul><li>Keyword <code><b>var</b></code> determines the identifier as a variable. <br>
+              <code>var a;          <span>// a=undefined</span> <span>(Identifier a is declared by keyword var without assigned value)</span> <br>
+                    var x = 5;      <span>// x=5</span>         <span>(Identifier x is initialized by keyword var with assigned value)</span> <br>
+                    var x = 6;      <span>// x=6</span>         <span>(Syntax allowing identifier x to be re-declared within same scope)</span> <br>
+                    x = 6 + 1;      <span>// x=7</span>         <span>(Syntax allowing identifier x to change value)</span> <br>
+                    {var x = 8;}    <span>// x=8</span>         <span>(Syntax allowing identifier x to be re-declared within different block scope)</span> <br>
+                    console.log(x);	<span>// x=8</span>         <span>(Keyword var is global scope, the value can be accessed between the scope)</span>
+              </code>
+          </li> <br>
+          <li>Keyword <code><b>let</b></code> determines the identifier as a variable. <br>
+              <code>let a;       <span>// a=undefined</span> <span>(Identifier a is declared by keyword let without assigned value)</span> <br>
+                    let x = 5;   <span>// x=5</span>         <span>(Identifier x is initialized by keyword let with assigned value)</span> <br>
+                    let x = 6;   <span>// error</span>       <span>(Syntax not allowed identifier x to be re-declared within same scope)</span> <br>
+                    x = 6 + 1;   <span>// x=7</span>         <span>(Syntax allowing identifier x to change value)</span> <br>
+                    {let x = 8;} <span>// x=8</span>         <span>(Syntax allowing identifier x to be re-declared within different block scope)</span> <br>
+                    console.log(x); <span>// x=7</span>      <span>(Keyword let is block scope, the value can't be accessed between the scope)</span>
+              </code>
+          </li><br>
+          <li>Keyword <code><b>const</b></code> determines the identifier as a variable. <br>
+              <code>const a;        <span>// error</span> <span>(Syntax not allowed identifier a declared by keyword const without assigned value)</span> <br>
+                    const x = 5;    <span>// x=5</span>   <span>(Identifier x is initialized by keyword const with assigned value)</span> <br>
+                    const x = 6;    <span>// error</span> <span>(Syntax not allowed identifier x to be re-declared within same scope)</span> <br>
+                    x = 6 + 1;      <span>// error</span> <span>(Syntax not allowed identifier x to change value)</span> <br>
+                    {const x = 8;}  <span>// x=8</span>   <span>(Syntax allowing identifier x to be re-declared within different block scope)</span> <br>
+                    console.log(x); <span>// x=5</span>   <span>(Keyword const is block scope, the value can't be accessed between the scope)</span>
+              </code>
+          </li><br>
+          <li>Keyword <code><b>function</b></code> determines the identifier as a function.</li>
+      </ul>
+
+      <h3>Conditional / Logical statement</h3>
+      <ul><li><code><b>if</b></code></li>
+          <li><code><b>switch</b></code></li>
+          <li><code><b>for</b></code></li>
+          <li><code><b>while</b></code></li>
+      </ul>
+    </section>
+<!--
+STYLE OF LI when nesting UL: 1st layer = disc, 2nd layer = circle, 3nd layer and above = square
+  HTML DOM
+  getElementById()
+
+    <i class="fa-brands fa-html5"></i>
     <table>
       <tr>
         <th>ATTRIBUTES <br> <code>&lt;myelement <i>myattribute</i>="myvalue"&gt;</code></th>
@@ -124,5 +320,18 @@
         <td>Boolean attribute</td>
       </tr>
     </table>
+
+    <table>
+      <tr>
+        <th>ELEMENTS <br> <code>&lt;<i>myelement</i> myattribute="myvalue"&gt;</code></th>
+        <th>DESCRIPTION</th>
+      </tr>
+      <tr>
+        <td><code><b>&lt;form&gt;</b> mycontent <b>&lt;/form&gt;</b></code></td>
+        <td>Specifies an HTML form for user input</td>
+      </tr>
+    </table>
+    <code><b>&lt; &gt;</b>  <b>&lt;/&gt;</b></code>
+  -->
   </body>
 </html>
