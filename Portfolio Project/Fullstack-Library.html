@@ -127,28 +127,95 @@
       </p>
 
       <h3>Arithmetic Operators</h3>
-      <p>Perform arithmetic on numbers (can be written with literals or variables) <br>
-         The precedence is from left to right applying <b>BODMAS</b> (bracket, power off, division/multiplication, addition/subtraction) <br>
-         Concatenation is addition of values for string (works for addition only)
-         <code>
-         <ul>let x = 5;      <span>// x=5</span>                  <span>(Variable x stores 5 as value)</span>
-             <li>x = x + 1;  <span>// x=6</span>                  <span>(<b>Addition</b>, x adds 1)</span></li>
-             <li>++x;        <span>// x=6</span>                  <span>(<b>Pre-increment</b>, x adds 1 on the same line)</span></li>
-             <li>x++;        <span>// x=5</span>                  <span>(<b>Post-increment</b>, x adds 1 on the next line)</span></li>
-             <li>x = x - 1;  <span>// x=4</span>                  <span>(<b>Subtraction</b>, x subtracts 1)</span></li>
-             <li>--x;        <span>// x=4</span>                  <span>(<b>Pre-decrement</b>, x subtracts 1 on the same line)</span></li>
-             <li>x--;        <span>// x=5</span>                  <span>(<b>Post-decrement</b>, x subtracts 1 on the next line)</span></li>
-             <li>x = x * 3;  <span>// x=15</span>                 <span>(<b>Multiplication</b>, x multiplies 3)</span></li>
-             <li>x = x ** 3; <span>// x=125</span>                <span>(<b>Exponentiation</b>, x exponents 3)</span></li>
-             <li>x = x / 3;  <span>// x=1.6666666666666667</span> <span>(<b>Division</b>, x divides 3 and takes quotient as evaluation)</span></li>
-             <li>x = x % 3;  <span>// x=2 </span>                 <span>(<b>Modulo</b>, x divides 3 and takes remainder as evaluationn)</span></li>
-         </ul>
-         </code>
+      <p>It is used to perform arithmetic on numbers (can be written with literals or variables). <br>
+         The precedence is from left to right applying <b>BODMAS</b> (bracket, power off, division/multiplication, addition/subtraction). <br>
+         Concatenation is addition of values for string (works for addition only).
+      </p>
+      <table>
+        <caption><code>let x = 5; let y = "Hello";</code></caption>
+        <tr> <th>OPERATORS</th>        <th>DESCRIPTIONS</th>                     <th>EXPRESSIONS</th>                           <th>RESULTS</th>                                                               </tr>
+        <tr> <td>Addition</td>         <td>Performs addition operation</td>      <td><code>x + 1; <br>y + "World";</code></td>  <td><code>// x = 6 <br> // y = HelloWorld</code></td>                          </tr>
+        <tr> <td>Pre-increment</td>    <td>Performs addition operation</td>      <td><code>++x;</code></td>                     <td><code>// x = 6 (x adds 1 on the same line)</code></td>                     </tr>
+        <tr> <td>Post-increment</td>   <td>Perform addition operation</td>       <td><code>x++;</code></td>                     <td><code>// x = 5 (x adds 1 on the next line)</code></td>                     </tr>
+        <tr> <td>Subtraction</td>      <td>Perform subtraction operation</td>    <td><code>x - 1;</code></td>                   <td><code>// x = 4</code></td>                                                 </tr>
+        <tr> <td>Pre-decrement</td>    <td>Perform subtraction operation</td>    <td><code>--x;</code></td>                     <td><code>// x = 4 (x subtracts 1 on the same line)</code></td>                </tr>
+        <tr> <td>Post-decrement</td>   <td>Perform subtraction operation</td>    <td><code>x--;</code></td>                     <td><code>// x = 5 (x subtracts 1 on the next line)</code></td>                </tr>
+        <tr> <td>Multiplication</td>   <td>Perform multiplication operation</td> <td><code>x * 3;</code></td>                   <td><code>// x = 15</code></td>                                                </tr>
+        <tr> <td>Exponentiation</td>   <td>Perform multiplication operation</td> <td><code>x ** 3;</code></td>                  <td><code>// x = 125 (multiplies itself 3 times)</code></td>                   </tr>
+        <tr> <td>Division</td>         <td>Perform division operation</td>       <td><code>x / 3;</code></td>                   <td><code>// x = 1.6666666666666667 (takes quotient as evaluation)</code></td> </tr>
+        <tr> <td>Modulo</td>           <td>Perform division operation</td>       <td><code>x % 3;</code></td>                   <td><code>// x = 2 (takes remainder as evaluation)</code></td>                 </tr>
+      </table>
+
+      <h3>Comparison Operators</h3>
+      <p>It is used in comparison statements to determine equality or difference between variables or values. <br>
+         Commonly used to test for <code>true</code> or <code>false</code>.
+      </p>
+      <table>
+        <caption><code>let x = 5;</code></caption>
+        <tr> <th>OPERATORS</th>                <th>DESCRIPTIONS</th>                                                 <th>COMPARISON STATEMENTS</th>                                   <th>RESULTS</th>                                                                                                                                                                                              </tr>
+        <tr> <td>Equal to</td>                 <td>Comparing the equality of data by values</td>                     <td><code>x == 8; <br> x == 5; <br> x == "5";</code></td>        <td><code>// false (x is not equal to 8 in value) <br> // true (x is equal to 5 in value) <br> // true (x is equal to 5 in value, data type neglected)</code></td>                                            </tr>
+        <tr> <td>Not equal to</td>             <td>Comparing the equality of data by values</td>                     <td><code>x != 8; <br> x != 5; <br> x != "5";</code></td>        <td><code>// true (x is not equal to 8 in value) <br> // false (x is equal to 5 in value) <br> // false (x is equal to 5 in value, data type negelected)</code></td>                                          </tr>
+        <tr> <td>Strict equal to</td>          <td>Comparing the equality of data by both values and data types</td> <td><code>x === 8; <br> x === 5; <br> x === "5";</code></td>     <td><code>// false (x is not equal to 8 in value, equal in data type) <br> // true (x is equal to 5 in both value and data type) <br> // false (x is equal to 5 in value, not equal in data type)</code></td> </tr>
+        <tr> <td>Strict not equal to</td>      <td>Comparing the equality of data by both values and data types</td> <td><code>x !== 8; <br> x !== 5; <br> x !== "5";</code></td>     <td><code>// true (x is not equal to 8 in value, equal in data type) <br> // false (x is equal to 5 in both value and data type) <br> // true (x is equal to 5 in value, not equal in data type)</code></td>  </tr>
+        <tr> <td>Greater than</td>             <td>Comparing the difference of data by values</td>                   <td><code>x &gt; 8; <br> x &gt; 3; <br> x &gt; 5;</code></td>    <td><code>// false (x is not greater than 8) <br> // true (x is greater than 3) <br> // false (x is not greater than 5)</code></td>                                                                           </tr>
+        <tr> <td>Less than</td>                <td>Comparing the difference of data by values</td>                   <td><code>x &lt; 8; <br> x &lt; 3; <br> x &lt; 5;</code></td>    <td><code>// true (x is less than 8) <br> // false (x is not less than 3) <br> // false (x is not less than 5)</code></td>                                                                                    </tr>
+        <tr> <td>Greater than or equal to</td> <td>Comparing the difference or equality of data by values</td>       <td><code>x &gt;= 8; <br> x &gt;= 3; <br> x &gt;= 5;</code></td> <td><code>// false (x is not greater than or equal to 8) <br> // true (x is greater than or equal to 3) <br> // true (x is greater than or equal to 5)</code></td>                                            </tr>
+        <tr> <td>Less than or equal to</td>    <td>Comparing the difference or equality of data by values</td>       <td><code>x &lt;= 8; <br> x &lt;= 3; <br> x &lt;= 5;</code></td> <td><code>// true (x is less than or equal to 8) <br> // false (x is not less than or equal to 3) <br> // true (x is less than or equal to 5)</code></td>                                                     </tr>
+      </table>
+
+      <h3>Logical Operators</h3>
+      <p>It is used to determine the logic between variables or values. <br>
+         Commonly used to test for <code>true</code> or <code>false</code>.
+      </p>
+      <table>
+        <caption><code>let x = 6; let y = 3;</code></caption>
+        <tr> <th>OPERATORS</th>   <th>DESCRIPTIONS</th>                                              <th>LOGICAL STATEMENTS</th>                                                      <th>RESULTS</th>                                                                                                         </tr>
+        <tr> <td>Logical AND</td> <td>Return <code>true</code> if all logics are true</td>           <td><code>(x &lt; 10) && (y &gt; 1); <br> (x &gt; 10) && (y &gt; 1);</code></td> <td><code>// true (all logics are true) <br> // false (one of the logic is false)</code></td>                            </tr>
+        <tr> <td>Logical OR</td>  <td>Return <code>true</code> if atleast one of logics is true</td> <td><code>(x == 5) || (y == 7); <br> (x == 6) || (y == 7);</code></td>           <td><code>// false (all logics are false) <br> // true (one of the logic is true)</code></td>                            </tr>
+        <tr> <td>Logical NOT</td> <td>Invert the result of the logic</td>                            <td><code>!(x == 10); <br> !(x == 6);</code></td>                                <td><code>// true (the logic is false but then inverted) <br> // false (the logic is true but then inverted)</code></td> </tr>
+      </table>
+
+      <h3>Bitwise Operators</h3>
+      <p>JavaScript stores numbers as 64 bits floating point numbers, but all bitwise operations are performed on 32 bits binary numbers. <br>
+         Before a bitwise operation is performed, JavaScript converts numbers to 32 bits signed integers. <br>
+         After the bitwise operation is performed, the result is converted back to 64 bits JavaScript numbers.
+      </p>
+      <table>
+        <caption><code>let x = 5;</code></caption>
+        <tr> <th>OPERATORS</th>                    <th>DESCRIPTIONS</th>                                                                                             <th>OPERATION</th>                      <th>BINARY OPERATION</th>                  <th>RESULTS</th>                        </tr>
+        <tr> <td>Bitwise AND</td>                  <td>Sets each bit to 1 if both bits are 1</td>                                                                    <td><code>x & 1;</code></td>            <td><code>0101 & 0001;</code></td>         <td><code>// 0001 &rarr; 1</code></td>  </tr>
+        <tr> <td>Bitwise OR</td>                   <td>Sets each bit to 1 if one of the bits is 1</td>                                                               <td><code>x | 1;</code></td>            <td><code>0101 | 0001;</code></td>         <td><code>// 0101 &rarr; 5</code></td>  </tr>
+        <tr> <td>Bitwise XOR</td>                  <td>Sets each bit to 1 if only one of the bits is 1</td>                                                          <td><code>x ^ 1;</code></td>            <td><code>0101 ^ 0001;</code></td>         <td><code>// 0100 &rarr; 4</code></td>  </tr>
+        <tr> <td>Bitwise NOT</td>                  <td>Inverts all the bits</td>                                                                                     <td><code>~ x;</code></td>              <td><code>~ 0101;</code></td>              <td><code>// 1010 &rarr; 10</code></td> </tr>
+        <tr> <td>Bitwise Left Shift</td>           <td>Shifts left by pushing zeros in from the right and let the leftmost bits fall off</td>                        <td><code>x &lt;&lt; 1;</code></td>     <td><code>0101 &lt;&lt; 1;</code></td>     <td><code>// 1010 &rarr; 10</code></td> </tr>
+        <tr> <td>Bitwise Right Shift</td>          <td>Shifts right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off</td> <td><code>x &gt;&gt; 1;</code></td>     <td><code>0101 &gt;&gt; 1;</code></td>     <td><code>// 0010 &rarr; 2</code></td>  </tr>
+        <tr> <td>Bitwise Unsigned Right Shift</td> <td>Shifts right by pushing zeros in from the left, and let the rightmost bits fall off</td>                      <td><code>x &gt;&gt;&gt; 1;</code></td> <td><code>0101 &gt;&gt;&gt; 1;</code></td> <td><code>// 0010 &rarr; 2</code></td>  </tr>
+      </table>
 
       <h3>Assignment Operators</h3>
-      <h3>Comparison Operators</h3>
-      <h3>Logical Operators</h3>
-      <h3>Bitwise Operators</h3>
+      <p>It is used to assign values to variable. <br>
+         Concatenation also works for assignment operators (works for simple and addition assignment only).
+      </p>
+      <table>
+        <caption><code>let x = 5; let y = "Hello";</code></caption>
+        <tr> <th>OPERATORS</th>                       <th>EXPRESSIONS</th>                            <th>IDENTICAL EXPRESSIONS</th>                        <th>RESULTS</th>                                      </tr>
+        <tr> <td>Simple Assignment</td>               <td><code>x = 5;  <br>y = "Hello";</code></td>  <td><code></code></td>                                <td><code>// x = 5 <br> // y = Hello</code></td>      </tr>
+        <tr> <td>Addition Assignment</td>             <td><code>x += 1; <br>y += "World";</code></td> <td><code>x = x + 1; <br>y = y + "World";</code></td> <td><code>// x = 6 <br> // y = HelloWorld</code></td> </tr>
+        <tr> <td>Subtraction Assignment</td>          <td><code>x -= 1;</code></td>                   <td><code>x = x - 1;</code></td>                      <td><code>// x = 4</code></td>                        </tr>
+        <tr> <td>Multiplication Assignment</td>       <td><code>x *= 3;</code></td>                   <td><code>x = x * 3;</code></td>                      <td><code>// x = 15</code></td>                       </tr>
+        <tr> <td>Exponentiation Assignment</td>       <td><code>x **= 3;</code></td>                  <td><code>x = x ** 3;</code></td>                     <td><code>// x = 125</code></td>                      </tr>
+        <tr> <td>Division Assignment</td>             <td><code>x /= 3;</code></td>                   <td><code>x = x / 3;</code></td>                      <td><code>// x = 1.6666666666666667</code></td>       </tr>
+        <tr> <td>Modulo Assignment</td>               <td><code>x %= 3;</code></td>                   <td><code>x = x % 3;</code></td>                      <td><code>// x = 2</code></td>                        </tr>
+        <tr> <td>Bitwise AND Assignment</td>          <td><code>x &= 1;</code></td>                   <td><code>x = x & 1;</code></td>                      <td><code>// x = 1</code></td>                        </tr>
+        <tr> <td>Bitwise OR Assignment</td>           <td><code>x |= 1;</code></td>                   <td><code>x = x | 1;</code></td>                      <td><code>// x = 5</code></td>                        </tr>
+        <tr> <td>Bitwise XOR Assignment</td>          <td><code>x ^= 1;</code></td>                   <td><code>x = x ^ 1;</code></td>                      <td><code>// x = 4</code></td>                        </tr>
+        <tr> <td>Left Shift Assignment</td>           <td><code>x &lt;&lt;= 1;</code></td>            <td><code>x = x &lt;&lt; 1;</code></td>               <td><code>// x = 10</code></td>                       </tr>
+        <tr> <td>Right Shift Assignment</td>          <td><code>x &gt;&gt;= 1;</code></td>            <td><code>x = x &gt;&gt; 1;</code></td>               <td><code>// x = 2</code></td>                        </tr>
+        <tr> <td>Unsigned Right Shift Assignment</td> <td><code>x &gt;&gt;&gt;= 1;</code></td>        <td><code>x = x &gt;&gt;&gt; 1;</code></td>           <td><code>// x = 2</code></td>                        </tr>
+        <tr> <td>Logical AND Assignment</td>          <td><code>x &&= y;</code></td>                  <td><code>x = x && (x=y);</code></td>                 <td><code></code></td>                                </tr>
+        <tr> <td>Logical OR Assignment</td>           <td><code>x ||= y;</code></td>                  <td><code>x = x || (x=y);</code></td>                 <td><code></code></td>                                </tr>
+        <tr> <td>Nullish Coalescing Assignment</td>   <td><code>x ??= 1;</code></td>                  <td><code>x = x ?? (x=1);</code></td>                 <td><code>// x = 5 (x = 1 if x undefined)</code></td> </tr>
+      </table>
     </section>
 
     <section id="statement">
