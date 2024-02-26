@@ -129,21 +129,29 @@
       <h3>Arithmetic Operators</h3>
       <p>It is used to perform arithmetic on numbers (can be written with literals or variables). <br>
          The precedence is from left to right applying <b>BODMAS</b> (bracket, power off, division/multiplication, addition/subtraction). <br>
-         Concatenation is addition of values for string (works for addition only).
+         Concatenation is addition of values for string (works for addition only). <br>
+         Below is the list for arithmetic operation executed across the data type:
+         <ul><li>Number with number (All arithmetic operations)</li>
+             <li>String with string (Only addition operation)</li>
+             <li>Boolean with boolean (All arithmetic operations)</li>
+             <li>Number with string (Only addition operation, written as string)</li>
+             <li>Number with boolean (All arithmetic operations)</li>
+             <li>String with boolean (Only addition operation, written as string)</li>
+         </ul>
       </p>
       <table>
         <caption><code>let x = 5; let y = "Hello";</code></caption>
-        <tr> <th>OPERATORS</th>        <th>DESCRIPTIONS</th>                     <th>EXPRESSIONS</th>                           <th>RESULTS</th>                                                               </tr>
-        <tr> <td>Addition</td>         <td>Performs addition operation</td>      <td><code>x + 1; <br>y + "World";</code></td>  <td><code>// x = 6 <br> // y = HelloWorld</code></td>                          </tr>
-        <tr> <td>Pre-increment</td>    <td>Performs addition operation</td>      <td><code>++x;</code></td>                     <td><code>// x = 6 (x adds 1 on the same line)</code></td>                     </tr>
-        <tr> <td>Post-increment</td>   <td>Perform addition operation</td>       <td><code>x++;</code></td>                     <td><code>// x = 5 (x adds 1 on the next line)</code></td>                     </tr>
-        <tr> <td>Subtraction</td>      <td>Perform subtraction operation</td>    <td><code>x - 1;</code></td>                   <td><code>// x = 4</code></td>                                                 </tr>
-        <tr> <td>Pre-decrement</td>    <td>Perform subtraction operation</td>    <td><code>--x;</code></td>                     <td><code>// x = 4 (x subtracts 1 on the same line)</code></td>                </tr>
-        <tr> <td>Post-decrement</td>   <td>Perform subtraction operation</td>    <td><code>x--;</code></td>                     <td><code>// x = 5 (x subtracts 1 on the next line)</code></td>                </tr>
-        <tr> <td>Multiplication</td>   <td>Perform multiplication operation</td> <td><code>x * 3;</code></td>                   <td><code>// x = 15</code></td>                                                </tr>
-        <tr> <td>Exponentiation</td>   <td>Perform multiplication operation</td> <td><code>x ** 3;</code></td>                  <td><code>// x = 125 (multiplies itself 3 times)</code></td>                   </tr>
-        <tr> <td>Division</td>         <td>Perform division operation</td>       <td><code>x / 3;</code></td>                   <td><code>// x = 1.6666666666666667 (takes quotient as evaluation)</code></td> </tr>
-        <tr> <td>Modulo</td>           <td>Perform division operation</td>       <td><code>x % 3;</code></td>                   <td><code>// x = 2 (takes remainder as evaluation)</code></td>                 </tr>
+        <tr> <th>OPERATORS</th>        <th>DESCRIPTIONS</th>                     <th>EXPRESSIONS</th>                                     <th>RESULTS</th>                                                               </tr>
+        <tr> <td>Addition</td>         <td>Performs addition operation</td>      <td><code>x + 1; <br>y + "World"; <br>x + y;</code></td> <td><code>// x = 6 <br> // y = HelloWorld <br> // 5Hello</code></td>           </tr>
+        <tr> <td>Pre-increment</td>    <td>Performs addition operation</td>      <td><code>++x;</code></td>                               <td><code>// x = 6 (x adds 1 on the same line)</code></td>                     </tr>
+        <tr> <td>Post-increment</td>   <td>Perform addition operation</td>       <td><code>x++;</code></td>                               <td><code>// x = 5 (x adds 1 on the next line)</code></td>                     </tr>
+        <tr> <td>Subtraction</td>      <td>Perform subtraction operation</td>    <td><code>x - 1;</code></td>                             <td><code>// x = 4</code></td>                                                 </tr>
+        <tr> <td>Pre-decrement</td>    <td>Perform subtraction operation</td>    <td><code>--x;</code></td>                               <td><code>// x = 4 (x subtracts 1 on the same line)/code></td>                 </tr>
+        <tr> <td>Post-decrement</td>   <td>Perform subtraction operation</td>    <td><code>x--;</code></td>                               <td><code>// x = 5 (x subtracts 1 on the next line)</code></td>                </tr>
+        <tr> <td>Multiplication</td>   <td>Perform multiplication operation</td> <td><code>x * 3;</code></td>                             <td><code>// x = 15</code></td>                                                </tr>
+        <tr> <td>Exponentiation</td>   <td>Perform multiplication operation</td> <td><code>x ** 3;</code></td>                            <td><code>// x = 125 (multiplies itself 3 times)</code></td>                   </tr>
+        <tr> <td>Division</td>         <td>Perform division operation</td>       <td><code>x / 3;</code></td>                             <td><code>// x = 1.6666666666666667 (takes quotient as evaluation)</code></td> </tr>
+        <tr> <td>Modulo</td>           <td>Perform division operation</td>       <td><code>x % 3;</code></td>                             <td><code>// x = 2 (takes remainder as evaluation)</code></td>                 </tr>
       </table>
 
       <h3>Comparison Operators</h3>
@@ -169,10 +177,10 @@
       </p>
       <table>
         <caption><code>let x = 6; let y = 3;</code></caption>
-        <tr> <th>OPERATORS</th>   <th>DESCRIPTIONS</th>                                              <th>LOGICAL STATEMENTS</th>                                                      <th>RESULTS</th>                                                                                                         </tr>
-        <tr> <td>Logical AND</td> <td>Return <code>true</code> if all logics are true</td>           <td><code>(x &lt; 10) && (y &gt; 1); <br> (x &gt; 10) && (y &gt; 1);</code></td> <td><code>// true (all logics are true) <br> // false (one of the logic is false)</code></td>                            </tr>
-        <tr> <td>Logical OR</td>  <td>Return <code>true</code> if atleast one of logics is true</td> <td><code>(x == 5) || (y == 7); <br> (x == 6) || (y == 7);</code></td>           <td><code>// false (all logics are false) <br> // true (one of the logic is true)</code></td>                            </tr>
-        <tr> <td>Logical NOT</td> <td>Invert the result of the logic</td>                            <td><code>!(x == 10); <br> !(x == 6);</code></td>                                <td><code>// true (the logic is false but then inverted) <br> // false (the logic is true but then inverted)</code></td> </tr>
+        <tr> <th>OPERATORS</th>   <th>DESCRIPTIONS</th>                                                                                                    <th>LOGICAL STATEMENTS</th>                                                      <th>RESULTS</th>                                                                                                         </tr>
+        <tr> <td>Logical AND</td> <td>Return <code>true</code> if all logics are true and return <code>false</code> if atleast one of logics is false</td> <td><code>(x &lt; 10) && (y &gt; 1); <br> (x &gt; 10) && (y &gt; 1);</code></td> <td><code>// true (all logics are true) <br> // false (one of the logic is false)</code></td>                            </tr>
+        <tr> <td>Logical OR</td>  <td>Return <code>true</code> if atleast one of logics is true and return <code>false</code> if all logics are false</td> <td><code>(x == 5) || (y == 7); <br> (x == 6) || (y == 7);</code></td>           <td><code>// false (all logics are false) <br> // true (one of the logic is true)</code></td>                            </tr>
+        <tr> <td>Logical NOT</td> <td>Invert the result of the logic</td>                                                                                  <td><code>!(x == 10); <br> !(x == 6);</code></td>                                <td><code>// true (the logic is false but then inverted) <br> // false (the logic is true but then inverted)</code></td> </tr>
       </table>
 
       <h3>Bitwise Operators</h3>
@@ -228,42 +236,97 @@
       </p>
 
       <h3>Declaration / Initialization statement</h3>
-      <ul><li>Keyword <code><b>var</b></code> determines the identifier as a variable. <br>
-              <code>var a;          <span>// a=undefined</span> <span>(Identifier a is declared by keyword var without assigned value)</span> <br>
-                    var x = 5;      <span>// x=5</span>         <span>(Identifier x is initialized by keyword var with assigned value)</span> <br>
-                    var x = 6;      <span>// x=6</span>         <span>(Syntax allowing identifier x to be re-declared within same scope)</span> <br>
-                    x = 6 + 1;      <span>// x=7</span>         <span>(Syntax allowing identifier x to change value)</span> <br>
+      <ul><li>Keyword <code><b>var</b></code> determines the identifier as a variable.                                                                     <br>
+              <code>var a;          <span>// a=undefined</span> <span>(Identifier a is declared by keyword var without assigned value)</span>              <br>
+                    var x = 5;      <span>// x=5</span>         <span>(Identifier x is initialized by keyword var with assigned value)</span>              <br>
+                    var x = 6;      <span>// x=6</span>         <span>(Syntax allowing identifier x to be re-declared within same scope)</span>            <br>
+                    x = 6 + 1;      <span>// x=7</span>         <span>(Syntax allowing identifier x to change value)</span>                                <br>
                     {var x = 8;}    <span>// x=8</span>         <span>(Syntax allowing identifier x to be re-declared within different block scope)</span> <br>
                     console.log(x);	<span>// x=8</span>         <span>(Keyword var is global scope, the value can be accessed between the scope)</span>
               </code>
           </li> <br>
-          <li>Keyword <code><b>let</b></code> determines the identifier as a variable. <br>
-              <code>let a;       <span>// a=undefined</span> <span>(Identifier a is declared by keyword let without assigned value)</span> <br>
-                    let x = 5;   <span>// x=5</span>         <span>(Identifier x is initialized by keyword let with assigned value)</span> <br>
-                    let x = 6;   <span>// error</span>       <span>(Syntax not allowed identifier x to be re-declared within same scope)</span> <br>
-                    x = 6 + 1;   <span>// x=7</span>         <span>(Syntax allowing identifier x to change value)</span> <br>
+          <li>Keyword <code><b>let</b></code> determines the identifier as a variable.                                                                  <br>
+              <code>let a;       <span>// a=undefined</span> <span>(Identifier a is declared by keyword let without assigned value)</span>              <br>
+                    let x = 5;   <span>// x=5</span>         <span>(Identifier x is initialized by keyword let with assigned value)</span>              <br>
+                    let x = 6;   <span>// error</span>       <span>(Syntax not allowed identifier x to be re-declared within same scope)</span>         <br>
+                    x = 6 + 1;   <span>// x=7</span>         <span>(Syntax allowing identifier x to change value)</span>                                <br>
                     {let x = 8;} <span>// x=8</span>         <span>(Syntax allowing identifier x to be re-declared within different block scope)</span> <br>
                     console.log(x); <span>// x=7</span>      <span>(Keyword let is block scope, the value can't be accessed between the scope)</span>
               </code>
-          </li><br>
-          <li>Keyword <code><b>const</b></code> determines the identifier as a variable. <br>
+          </li> <br>
+          <li>Keyword <code><b>const</b></code> determines the identifier as a variable.                                                                  <br>
               <code>const a;        <span>// error</span> <span>(Syntax not allowed identifier a declared by keyword const without assigned value)</span> <br>
-                    const x = 5;    <span>// x=5</span>   <span>(Identifier x is initialized by keyword const with assigned value)</span> <br>
-                    const x = 6;    <span>// error</span> <span>(Syntax not allowed identifier x to be re-declared within same scope)</span> <br>
-                    x = 6 + 1;      <span>// error</span> <span>(Syntax not allowed identifier x to change value)</span> <br>
-                    {const x = 8;}  <span>// x=8</span>   <span>(Syntax allowing identifier x to be re-declared within different block scope)</span> <br>
+                    const x = 5;    <span>// x=5</span>   <span>(Identifier x is initialized by keyword const with assigned value)</span>                 <br>
+                    const x = 6;    <span>// error</span> <span>(Syntax not allowed identifier x to be re-declared within same scope)</span>              <br>
+                    x = 6 + 1;      <span>// error</span> <span>(Syntax not allowed identifier x to change value)</span>                                  <br>
+                    {const x = 8;}  <span>// x=8</span>   <span>(Syntax allowing identifier x to be re-declared within different block scope)</span>      <br>
                     console.log(x); <span>// x=5</span>   <span>(Keyword const is block scope, the value can't be accessed between the scope)</span>
               </code>
-          </li><br>
+          </li> <br>
           <li>Keyword <code><b>function</b></code> determines the identifier as a function.</li>
       </ul>
 
       <h3>Conditional / Logical statement</h3>
-      <ul><li><code><b>if</b></code></li>
-          <li><code><b>switch</b></code></li>
+      <ul><li>Keyword <code><b>if</b></code> specifies the statement to be a conditional/logical statement whether it is <code>true</code> or <code>false</code>. <br>
+              If the statement is <code>true</code>, the current block code will be executed and ignore all other statements (if any).                            <br>
+              If the statement is <code>false</code>, the current block code will be ignored and check the next statements (if any).                              <br>
+              Keyword <code><b>else if</b></code> specifies the statement to be a new conditional/logical statement when previous statements are false.           <br>
+              Keyword <code><b>else</b></code> is used when all previous statements are false and executing the current block code.                               <br>
+              <code>let x = 5;                         <span>// Identifier x is initialized by keyword let with assigned value</span>                             <br>
+                    if (x > 6)                         <span>// Setting a conditional or logical statement (checking if x is greater than 6)</span>               <br>
+                      {console.log("Greater than 6");} <span>// Executes this block code when the statement is true</span>                                        <br>
+                    else if (x==6)                     <span>// Setting a new conditional or logical statement (checking if x is equal to 6)</span>               <br>
+                      {console.log("Equal to 6");}     <span>// Executes this block code when the statement is true</span>                                        <br>
+                    else                               <span>// A false conditional or logical statement</span>                                                   <br>
+                      {console.log("None are right");} <span>// Executes this block code when all the previous statements are false</span>                        <br>
+              </code>
+          </li> <br>
+          <li>Keyword <code><b>switch</b></code> specifies the statement to be a conditional/logical statement that perform different actions based on different conditions. <br>
+              Keyword <code><b>case</b></code> specifies the possible output value from the statement.                                                                       <br>
+              Keyword <code><b>break</b></code> specifies the current block code should be stop executing (if omit, it will run the next code block).                        <br>
+              Keyword <code><b>default</b></code> specifies the code to run if there is no case match.                                                                       <br>
+              <code>let x = 5;                    <span>// Identifier x is initialized by keyword let with assigned value</span>                                             <br>
+                    switch (x + 1){               <span>// Setting a conditional/logical/expression statement to produce some outputs</span>                                 <br>
+                      case 6:                     <span>// Setting a possible value from the statement to be matched</span>                                                  <br>
+                        console.log("6");         <span>// Execute this block when match with the value</span>                                                               <br>
+                      case 7:                     <span>// Setting a possible value from the statement to be matched</span>                                                  <br>
+                        console.log("7");         <span>// Execute this block when match with the value</span>                                                               <br>
+                      default:                    <span>// No match at all with possible value from the statement</span>                                                     <br>
+                        console.log("No match");  <span>// Execute this block when no match with the value</span>                                                            <br>
+                    }
+              </code>
+          </li> <br>
           <li><code><b>for</b></code></li>
           <li><code><b>while</b></code></li>
       </ul>
+    </section>
+
+    <section id="data-type">
+      <h1>DATA TYPE</h1>
+
+      <h3>Number</h3>
+      <p>JavaScript does not define different types of numbers, like integers, short, long, floating-point, etc. <br>
+         JavaScript numbers are always stored as double precision floating point numbers, either written in decimal numbers or (standard international IEEE 754). <br>
+         By default, JavaScript displays numbers as base 10 decimals. <br>
+         Numbers can be written:
+         <ul><li>Without decimals (<code>4, -29, 1250</code>)</li>
+             <li>With decimals (<code>3.142, -0.000251, -439.1</code>)</li>
+             <li>With scientific notation / exponential, <code>1.25e3 (1250), -4.331e6 (-4331000), 0.401e-4 (0.0000401), -3.12e-1 (-0.312)</code></li>
+             <li>With hexadecimals, <code>0xFF (255), 0xa3 (163), -0xdd (-221)</code></li>
+             <li>With keyword <code>NaN</code>, as "Not a Number" (can be achieved by performing some operation with other than data type number)</li>
+             <li>With keyword <code>Infinity, -Infinity</code> (can be achieved by calculate a number outside the largest possible number)</li>
+         </ul>
+      </p>
+
+      <h3>String</h3>
+      <h3>Bigint</h3>
+      <h3>Boolean</h3>
+      <h3>Undefined</h3>
+      <h3>Null</h3>
+      <h3>Symbol</h3>
+      <h3>Object</h3>
+      <h3>Array</h3>
+      <h3>Date</h3>
     </section>
 <!--
 STYLE OF LI when nesting UL: 1st layer = disc, 2nd layer = circle, 3nd layer and above = square
