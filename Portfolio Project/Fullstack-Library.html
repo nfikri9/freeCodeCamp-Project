@@ -319,6 +319,71 @@
       </p>
 
       <h3>String</h3>
+      <p>It is a primitive and immutable data that storing text (created from literals which it's value can't be changed). <br>
+         <code>let myString = 'Hello World'; // A series of characters (consists of zero or more characters) written with single quotes within a single line</code> <br>
+         <code>let myString = "Hello World"; // A series of characters (consists of zero or more characters) written with double quotes within a single line</code> <br>
+         <code>let myTemplate = `Hello World`; // A series of characters (consists of zero or more characters) written with backticks within multi-lines</code> <br>
+         <code>let myTemplate = ${myString}; // myTemplate = Hello World</code>
+      </p>
+      <p>Can use single quotes, double quotes, backticks or all of them inside the strings/templates as long as they don't match the quotes surround them. <br>
+         <code>let myString = "What is 'yeet' means?"; // Single quotes inside double quotes</code> <br>
+         <code>let myString = 'What is "yeet" means?'; // Double quotes inside single quotes</code> <br>
+         <code>let myTemplate = `What is 'yeet' means?`; // Single quotes inside backticks</code> <br>
+      </p>
+      <table>
+        <caption>List of Escape Characters</caption>
+        <tr> <th>ESCAPE CHARACTERS</th>                      <th>STATEMENTS</th>                     <th>RESULTS</th>                                                                             </tr>
+        <tr> <td><code>\'</code> (Single Quote)</td>         <td><code>"Hello \'World\'"</code></td> <td><code>// Hello 'World'</code></td>                                                       </tr>
+        <tr> <td><code>\"</code> (Double Quotes)</td>        <td><code>"Hello \"World\""</code></td> <td><code>// Hello "World"</code></td>                                                       </tr>
+        <tr> <td><code>\\</code> (Backslash)</td>            <td><code>"Hello \\World\\"</code></td> <td><code>// Hello \World\</code></td>                                                       </tr>
+        <tr> <td><code>\b</code> (Backspace)</td>            <td><code>"Hello\bWorld"</code></td>    <td><code>// Hello<sub>BS</sub>World (ONLY works in output command, not in HTML)</code></td> </tr>
+        <tr> <td><code>\f</code> (Form Feed)</td>            <td><code>"Hello\fWorld"</code></td>    <td><code>// Hello<sub>FF</sub>World (ONLY works in output command, not in HTML)</code></td> </tr>
+        <tr> <td><code>\n</code> (New Line)</td>             <td><code>"Hello\nWorld"</code></td>    <td><code>// Hello (ONLY works in output command, not in HTML)<br>World</code></td>          </tr>
+        <tr> <td><code>\r</code> (Carriage Return)</td>      <td><code>"Hello\rWorld"</code></td>    <td><code>// Hello (ONLY works in output command, not in HTML)<br>World</code></td>          </tr>
+        <tr> <td><code>\t</code> (Horizontal Tabulator)</td> <td><code>"Hello\tWorld"</code></td>    <td><code>// Hello   World (Space 3x, ONLY works in output command, not in HTML)</code></td> </tr>
+        <tr> <td><code>\v</code> (Vertical Tabulator)</td>   <td><code>"Hello\vWorld"</code></td>    <td><code>// Hello<sub>VT</sub>World (ONLY works in output command, not in HTML)</code></td> </tr>
+      </table>
+
+      <table>
+        <caption><code>let myString = "Hello World";</code></caption>
+        <tr> <th>PROPERTIES / METHODS</th>               <th>DESCRIPTIONS</th>                                                                                                                                                                                             <th>DATA TYPES</th> <th>STATEMENTS</th>                       <th>RESULTS</th>                                  </tr>
+        <tr> <td><code>length</code></td>                <td>Returns the length of a data (result is in number)</td>                                                                                                                                                       <td>String</td>     <td><code>myString.length;</code></td>    <td><code>// 11</code></td>                       </tr>
+        <tr> <td><code>at(myIndex)</code></td>           <td>Returns the character at a specified index <br> <i>(Negative index starts from the last character) <br> (Returns undefined if the index is out of range)</i></td>                                             <td>String</td>     <td><code>myString.at(0);</code></td>     <td><code>// H</code></td>                        </tr>
+        <tr> <td><code>charAt(myIndex)</code></td>       <td>Returns the character at a specified index <br> <i>(Returns empty string ("") if the index is out of range, including negative index)</i></td>                                                                <td>String</td>     <td><code>myString.charAt(0);</code></td> <td><code>// H</code></td>                        </tr>
+        <tr> <td><code>charCodeAt(myIndex)</code></td>   <td>Returns a UTF-16 code (an integer between 0 and 65535) of the character at a specified index (result is in number) <br> <i>(Returns NaN if the index is out of range, icluding negative index)</i></td>       <td>String</td>     <td><code>myString.charCodeAt(0);</code>  <td><code>// 72 (UTF-16 code for H)</code> </td>  </tr>
+        <tr> <td><code>codePointAt(myIndex)</code></td>  <td>Returns the Unicode value (greater than 0xFFFF, 65535) of the character at a specified index (result is in number) <br> <i>(Returns undefined if the index is out of range, icluding negative index)</i></td> <td>String</td>     <td><code>myString.codePointAt(0);</code> <td><code>// 72 (Unicode value for H)</code></td> </tr>
+        <tr> <td><code>slice(myStart, myEnd)</code></td> <td>Extracts a part of a string from myStart (starting index point) to myEnd (ending index point is before the index itself) and returns the extracted part in a new string</td>                                  <td>String</td>     <td><code>myString.slice(0,5);</code>     <td><code>// Hello</code></td>                    </tr>
+        <tr> <td><code>concat()</code></td>            </tr>
+        <tr> <td><code>constructor</code></td>         </tr>
+        <tr> <td><code>endsWith()</code></td>          </tr>
+        <tr> <td><code>fromCharCode()</code></td>      </tr>
+        <tr> <td><code>includes()</code></td>          </tr>
+        <tr> <td><code>indexOf()</code></td>           </tr>
+        <tr> <td><code>lastIndexOf()</code></td>       </tr>
+        <tr> <td><code>localeCompare()</code></td>     </tr>
+        <tr> <td><code>match()</code></td>             </tr>
+        <tr> <td><code>padEnd()</code></td>            </tr>
+        <tr> <td><code>padStart()</code></td>          </tr>
+        <tr> <td><code>prototype</code></td>           </tr>
+        <tr> <td><code>repeat()</code></td>            </tr>
+        <tr> <td><code>replace()</code></td>           </tr>
+        <tr> <td><code>replaceAll()</code></td>        </tr>
+        <tr> <td><code>search()</code></td>            </tr>
+        <tr> <td><code>split()</code></td>             </tr>
+        <tr> <td><code>startsWith()</code></td>        </tr>
+        <tr> <td><code>substr()</code></td>            </tr>
+        <tr> <td><code>substring()</code></td>         </tr>
+        <tr> <td><code>toLocaleLowerCase()</code></td> </tr>
+        <tr> <td><code>toLocaleUpperCase()</code></td> </tr>
+        <tr> <td><code>toLowerCase()</code></td>       </tr>
+        <tr> <td><code>toString()</code></td>          </tr>
+        <tr> <td><code>toUpperCase()</code></td>       </tr>
+        <tr> <td><code>trim()</code></td>              </tr>
+        <tr> <td><code>trimEnd()</code></td>           </tr>
+        <tr> <td><code>trimStart()</code></td>         </tr>
+        <tr> <td><code>valueOf()</code></td>           </tr>
+      </table>
+
       <h3>Bigint</h3>
       <h3>Boolean</h3>
       <h3>Undefined</h3>
