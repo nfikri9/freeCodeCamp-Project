@@ -12,29 +12,30 @@
     <form onsubmit="return false;">
       <fieldset>
         <legend>Personal</legend>
-        <label for="fullname">FULL NAME</label> <input id="fullname" type="text" placeholder="Enter your full name">
-        <label for="dob">DATE OF BIRTH</label>  <input id="dob" type="date">
-        <label for="male">MALE</label>          <input id="male" name="gender" type="radio" value="Male">
-        <label for="female">FEMALE</label>      <input id="female" name="gender" type="radio" value="Female">
-        <label for="race">RACE</label>          <select id="race">
-                                                  <option value="" selected disabled>Select race</option>
-                                                  <option value="MELAYU">MELAYU</option>
-                                                  <option value="INDIA">INDIA</option>
-                                                  <option value="CINA">CINA</option>
-                                                  <option value="OTHERS">OTHERS</option>
-                                                </select>
+        <label for="fullname">FULL NAME</label> <input id="fullname" type="text" placeholder="Enter your full name" required> <br>
+        <label for="ic">IDENTIFICATION NUMBER</label>  <input id="ic" type="text" placeholder="without -" required> <br>
+        <label for="dob">DATE OF BIRTH</label>  <input id="dob" type="date"> <br>
+        GENDER: <label for="male">MALE</label>  <input id="male" name="gender" type="radio" value="Male">
+        <label for="female">FEMALE</label>      <input id="female" name="gender" type="radio" value="Female"> <br>
+        <label for="race">RACE</label>          <select id="race" required>
+                                                 <option value="" selected disabled>Select race</option>
+                                                 <option value="MELAYU">MELAYU</option>
+                                                 <option value="INDIA">INDIA</option>
+                                                 <option value="CINA">CINA</option>
+                                                 <option value="OTHERS">OTHERS</option>
+                                                </select> <br>
         <input type="submit" onclick="displayOutput();">
       </fieldset>
     </form>
 
     <h1>DISPLAY SECTION</h1>
     <section id="display">
-      FULL NAME:      <span id="display-full-name"></span> <br>
-      DATE OF BIRTH:  <span id="display-dob"></span> <br>
-      GENDER:         <span id="display-gender"></span> <br>
-      RACE:           <span id="display-race"></span> <br>
+      FULL NAME:             <span id="display-full-name"></span> <br>
+      IDENTIFICATION NUMBER: <span id="display-ic"></span> <br>
+      DATE OF BIRTH:         <span id="display-dob"></span> <br>
+      GENDER:                <span id="display-gender"></span> <br>
+      RACE:                  <span id="display-race"></span> <br>
     </section>
-
 
   </body>
 </html>
