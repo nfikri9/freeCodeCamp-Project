@@ -11,6 +11,42 @@
     <li>CSS to specify the layout of web pages</li>
     <li>JavaScript to program the behavior of web pages</li>
 
+<pre>
+&lt;audio preload="myvalue" src="myvalue" autoplay controls loop muted&gt;
+&lt;source src="myvalue" type="myvalue"&gt;
+mytext
+&lt;/audio&gt;
+</pre>
+- Element <code>&lt;audio&gt;</code>  = Specifies sound content. <br>
+- Element <code>&lt;source&gt;</code> = Specify alternative audio files which the browser may choose from. (The browser will use the first recognized format) <br>
+- <code>mytext</code> will only be displayed in browsers that do not support the <code>&lt;audio&gt;</code> element. <br>
+- Attribute <code>preload="myvalue"</code> = KIV <br>
+- Attribute <code>src="myvalue"</code>     = Specifies the URL of the audio. <br>
+- Attribute <code>autoplay</code>          = The audio will automatically start playing as soon as webpage is loaded. <br>
+- Attribute <code>controls</code>          = Specifies controls that displayed features of play, pause, volume, seeking. <br>
+- Attribute <code>loop</code>              = Specifies audio will start over again, every time it is finished. <br>
+- Attribute <code>muted</code>             = Specifies audio should be muted. <br>
+- Attribute <code>type="myvalue"</code>    = Specifies the audio type. (<code>myaudio/mpeg, myaudio/ogg, myaudio/wav</code>) <br>
+- Both element <code>&lt;audio&gt;</code> and <code>&lt;source&gt;</code> support Global Attributes, Event Attributes, HTML DOM. <br>
+
+<!--GLOBAL ATTRIBUTES-->
+<!--BOOLEAN ATTRIBUTES
+- autoplay = audio [video]
+- controls = audio [video]
+- loop     = audio [video]
+- muted    = audio [video]
+-->
+<!--MEDIA ATTRIBUTES
+- preload = audio [video]
+- source  = audio [picture, video]
+-->
+<!--UNCATEGORIZED ATTRIBUTES
+- src  = audio, source [embed, iframe, img, input, script, track, video]
+- type = source [a, button, embed, input, link, menu, object, script, style]
+-->
+<!--EVENT ATTRIBUTES-->
+<!--HTML DOM-->
+
     <section id="introduction">
       <h1>INTRODUCTION</h1>
       <p>JavaScript is the programming language of the Web. <br>
