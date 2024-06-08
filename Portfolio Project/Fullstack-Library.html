@@ -5,48 +5,128 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Fullstack-Library.css">
+    <script type="text/javascript" src="Fullstack-Library.js"></script>
   </head>
   <body>
+    <h3>MEDIA</h3>
+    <div onclick="element_audio()">AUDIO</div>
+    <hr>
+<pre>
+&lt;audio preload="myvalue" src="myvalue" autoplay controls loop muted&gt;
+&lt;source src="myvalue" type="myvalue"&gt;
+&lt;track kind="myvalue" label="myvalue" src="myvalue" srclang="myvalue" default&gt;
+mytext
+&lt;/audio&gt;
+</pre>
+       <!--00--><span class="audio"></span> <br>
+    <p>Related media attributes: <br>
+       <!--00--><span class="preload"></span> <br>
+       <!--00--><span class="src"></span> <br>
+    </p>
+
+    <p>Related boolean attributes: <br>
+       <!--00--><span class="autoplay"></span> <br>
+       <!--00--><span class="controls"></span> <br>
+       <!--00--><span class="loop"></span> <br>
+       <!--00--><span class="muted"></span> <br>
+    </p>
+    
+    <p>Related event attributes: <br>
+       <!--00--><span class="onabort"></span> <br>
+       <!--00--><span class="oncanplay"></span> <br>
+       <!--00--><span class="oncanplaythrough"></span> <br>
+       <!--00--><span class="ondurationchange"></span> <br>
+       <!--00--><span class="onemptied"></span> <br>
+       <!--00--><span class="onended"></span> <br>
+       <!--00--><span class="onerror"></span> <br>
+       <!--00--><span class="onloadeddata"></span> <br>
+       <!--00--><span class="onloadedmetadata"></span> <br>
+       <!--00--><span class="onloadstart"></span> <br>
+       <!--00--><span class="onpause"></span> <br>
+       <!--00--><span class="onplay"></span> <br>
+       <!--00--><span class="onplaying"></span> <br>
+       <!--00--><span class="onprogress"></span> <br>
+       <!--00--><span class="onratechange"></span> <br>
+       <!--00--><span class="onseeked"></span> <br>
+       <!--00--><span class="onseeking"></span> <br>
+       <!--00--><span class="onstalled"></span> <br>
+       <!--00--><span class="onsuspend"></span> <br>
+       <!--00--><span class="ontimeupdate"></span> <br>
+       <!--00--><span class="onvolumechange"></span> <br>
+       <!--00--><span class="onwaiting"></span> <br>
+    </p>
+
+    <p>Related other element(s): <br>
+       <!--00--><span class="source"></span> <br>
+    </p>
+
+    <hr>
     <li>HTML to define the content of web pages</li>
     <li>CSS to specify the layout of web pages</li>
     <li>JavaScript to program the behavior of web pages</li>
 
-<pre>
-&lt;audio preload="myvalue" src="myvalue" autoplay controls loop muted&gt;
-&lt;source src="myvalue" type="myvalue"&gt;
-mytext
-&lt;/audio&gt;
-</pre>
-- Element <code>&lt;audio&gt;</code>  = Specifies sound content. <br>
-- Element <code>&lt;source&gt;</code> = Specify alternative audio files which the browser may choose from. (The browser will use the first recognized format) <br>
+
 - <code>mytext</code> will only be displayed in browsers that do not support the <code>&lt;audio&gt;</code> element. <br>
-- Attribute <code>preload="myvalue"</code> = KIV <br>
-- Attribute <code>src="myvalue"</code>     = Specifies the URL of the audio. <br>
-- Attribute <code>autoplay</code>          = The audio will automatically start playing as soon as webpage is loaded. <br>
-- Attribute <code>controls</code>          = Specifies controls that displayed features of play, pause, volume, seeking. <br>
-- Attribute <code>loop</code>              = Specifies audio will start over again, every time it is finished. <br>
-- Attribute <code>muted</code>             = Specifies audio should be muted. <br>
 - Attribute <code>type="myvalue"</code>    = Specifies the audio type. (<code>myaudio/mpeg, myaudio/ogg, myaudio/wav</code>) <br>
-- Both element <code>&lt;audio&gt;</code> and <code>&lt;source&gt;</code> support Global Attributes, Event Attributes, HTML DOM. <br>
+- Attribute <code>default</code>           = Specifies that the track is to be enabled if the user's preferences do not indicate that another track would be more appropriate. <br>
+- Attribute <code>kind="myvalue"</code>    = Specifies the kind of text track. (<code>captions, chapters, descriptions, metadata, subtitles</code>) <br>
+- Attribute <code>label="myvalue"</code>   = Specifies the title of the text track. <br>
+- Attribute <code>srclang="myvalue"</code> = Specifies the language of the track text data. (required if <code>kind="subtitles"</code>) <br>
+- Element <code>&lt;video&gt;, &lt;source&gt;, &lt;track&gt;</code> support Global Attributes, Event Attributes, HTML DOM. <br>
+
+<pre>
+&lt;video height="myvalue" poster="myvalue" preload="myvalue" src="myvalue" width="myvalue" autoplay controls loop muted&gt;
+&lt;source src="myvalue" type="myvalue"&gt;
+&lt;track kind="myvalue" label="myvalue" src="myvalue" srclang="myvalue" default&gt;
+mytext
+&lt;/video&gt;
+</pre>
+- Element <code>&lt;video&gt;</code>  = Specifies video content. <br>
+- Element <code>&lt;source&gt;</code> = Specify alternative video files which the browser may choose from. (The browser will use the first recognized format) <br>
+- Element <code>&lt;track&gt;</code>  = Specifies text tracks for video. <br>
+- <code>mytext</code> will only be displayed in browsers that do not support the <code>&lt;video&gt;</code> element. <br>
+- Attribute <code>height="myvalue"</code>  = Specifies the height of a video player. <br>
+- Attribute <code>poster="myvalue"</code>  = Specifies an image to be shown while the video is downloading, or until the user hits the play button. <br>
+- Attribute <code>preload="myvalue"</code> = KIV <br>
+- Attribute <code>src="myvalue"</code>     = Specifies the URL of the video. <br>
+- Attribute <code>width="myvalue"</code>   = Specifies the width of a video player. <br>
+- Attribute <code>autoplay</code>          = The video will automatically start playing as soon as webpage is loaded. <br>
+- Attribute <code>controls</code>          = Specifies controls that displayed features of play, pause, volume, seeking, fullscreen toggle, captions/subtitles, track. <br>
+- Attribute <code>loop</code>              = Specifies video will start over again, every time it is finished. <br>
+- Attribute <code>muted</code>             = Specifies video should be muted. <br>
+- Attribute <code>type="myvalue"</code>    = Specifies the video type. (<code>myvideo/mp4, myvideo/ogg, myvideo/webm</code>) <br>
+- Attribute <code>default</code>           = Specifies that the track is to be enabled if the user's preferences do not indicate that another track would be more appropriate. <br>
+- Attribute <code>kind="myvalue"</code>    = Specifies the kind of text track. (<code>captions, chapters, descriptions, metadata, subtitles</code>) <br>
+- Attribute <code>label="myvalue"</code>   = Specifies the title of the text track. <br>
+- Attribute <code>srclang="myvalue"</code> = Specifies the language of the track text data. (required if <code>kind="subtitles"</code>) <br>
+- Element <code>&lt;video&gt;, &lt;source&gt;, &lt;track&gt;</code> support Global Attributes, Event Attributes, HTML DOM. <br>
 
 <!--GLOBAL ATTRIBUTES-->
 <!--BOOLEAN ATTRIBUTES
-- autoplay = audio [video]
-- controls = audio [video]
-- loop     = audio [video]
-- muted    = audio [video]
+- autoplay = audio, video
+- controls = audio, video
+- default  = track
+- loop     = audio, video
+- muted    = audio, video
 -->
 <!--MEDIA ATTRIBUTES
-- preload = audio [video]
-- source  = audio [picture, video]
+- preload = audio, video
+- poster  = video
+-->
+<!--SIZE ATTRIBUTES
+- height = video [canvas, embed, iframe, img, input, object]
+- width  = video [canvas, embed, iframe, img, input, object]
 -->
 <!--UNCATEGORIZED ATTRIBUTES
-- src  = audio, source [embed, iframe, img, input, script, track, video]
+- src  = audio, source, track, video [embed, iframe, img, input, script]
 - type = source [a, button, embed, input, link, menu, object, script, style]
 -->
 <!--EVENT ATTRIBUTES-->
 <!--HTML DOM-->
-
+<br>RELATED ELEMENTS <br>
+- source = audio, video [picture] <br>
+- track  = audio, video
+<!--
     <section id="introduction">
       <h1>INTRODUCTION</h1>
       <p>JavaScript is the programming language of the Web. <br>
@@ -107,7 +187,7 @@ mytext
 
     <section id="syntax">
       <h1>SYNTAX</h1>
-      <p>Syntax refers to the rules that define the structure of any language. <br> <!--https://woz-u.com/blog/what-is-syntax-in-computer-programming/-->
+      <p>Syntax refers to the rules that define the structure of any language. <br> https://woz-u.com/blog/what-is-syntax-in-computer-programming/
          Every statement is ended with semicolon. <br>
          There are many type of statements in JavaScript: <br>
          <code>var x;       <span>// Example of declaration statement</span> <br>
@@ -429,7 +509,7 @@ mytext
       <h3>Array</h3>
       <h3>Date</h3>
     </section>
-<!--
+
 STYLE OF LI when nesting UL: 1st layer = disc, 2nd layer = circle, 3nd layer and above = square
   HTML DOM
   getElementById()
