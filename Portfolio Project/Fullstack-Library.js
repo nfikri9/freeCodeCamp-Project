@@ -1,4 +1,6 @@
+// LIST OF CATEGORIES
 const supports = [`Supported`, `Not Supported`];
+const groups   = [`Media`];
 
 // LIST OF ATTRIBUTES
 const element = {comment    : [],
@@ -9,8 +11,9 @@ const element = {comment    : [],
                  area       : [],
                  article    : [],
                  aside      : [],
-                 audio      : {definition : `Embed sound content`,
-                               notes      : [/*00*/ ``]},
+                 audio      : {definition : `Embed sound content.`,
+                               notes      : [/*00*/ `The <code>mytext</code> will only be displayed in browsers that do not support the element.`,
+                                             /*01*/ `There are 3 supported audio formats in HTML: MP3, WAV, and OGG.`]},
                  b          : [],
                  base       : [],
                  bdi        : [],
@@ -121,7 +124,7 @@ const attribute = {accept             : [],
                    async              : [],
                    autocomplete       : [],
                    autofocus          : [],
-                   autoplay           : [],
+                   autoplay           : {definition: `The media will automatically start playing as soon as it can do so without stopping.`},
                    charset            : [],
                    checked            : [],
                    cite               : [],
@@ -283,8 +286,14 @@ const attribute = {accept             : [],
                    width              : [],
                    wrap               : []};
 
-function element_audio(){
-    document.getElementById("definition").innerHTML = element.audio.definition;
+function result(){
+    let x = document.querySelector("#myselect").value;
+    let y = element.x;
+
+        if (x == y){
+            document.getElementById("definition").innerHTML = y.definition;
+        }
+     
 }
 
 /*
